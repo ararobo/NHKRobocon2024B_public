@@ -22,13 +22,35 @@ LED::~LED()
 void LED::led_test(SPI_HandleTypeDef *hspi)
 {
     Color color;
-    setLed(4, 70, 30, 0, color);
+    setLed(4, 10, 10, 10, color);
     show(hspi);
 }
 // 1
 void LED::led_rainbow(SPI_HandleTypeDef *hspi)
 {
     Color color;
+    if (led_standard_1 >= LED_COUNT)
+    {
+        led_standard_1 = 0;
+    }
+    else
+    {
+        led_standard_1++;
+    }
+
+    if (led_standard_1 - led_1 < 0)
+    {
+        for (led_times_1 = 1; led_times_1 <= led_pieces_1; led_times_1++)
+        {
+            setLed(LED_COUNT + led_standard_1 - led_1 + 1 - led_times_1, 10, 0, 10, color);
+        }
+    }
+    else
+    {
+        setLed(led_standard_1 - led_1, 10, 0, 10, color);
+    }
+    show(hspi);
+    HAL_Delay(50);
     if (led_standard_1 == led_pieces_1)
     {
         if (led_number_1 == 4)
@@ -73,29 +95,8 @@ void LED::led_rainbow(SPI_HandleTypeDef *hspi)
         setLed(led_standard_1 - led_pieces_1, led_other_g_1, led_other_r_1, led_other_b_1, color);
     }
     show(hspi);
-    if (led_standard_1 >= LED_COUNT)
-    {
-        led_standard_1 = 0;
-    }
-    else
-    {
-        led_standard_1++;
-    }
-
-    if (led_standard_1 - led_1 < 0)
-    {
-        for (led_times_1 = 1; led_times_1 <= led_pieces_1; led_times_1++)
-        {
-            setLed(LED_COUNT + led_standard_1 - led_1 + 1 - led_times_1, 10, 0, 10, color);
-        }
-    }
-    else
-    {
-        setLed(led_standard_1 - led_1, 10, 0, 10, color);
-    }
-    show(hspi);
 }
-// 2
+// 2 use
 void LED::led_line(SPI_HandleTypeDef *hspi)
 {
     Color color;
@@ -161,15 +162,15 @@ void LED::led_line(SPI_HandleTypeDef *hspi)
     {
         for (led_times_2 = 1; led_times_2 <= led_pieces_2; led_times_2++)
         {
-            setLed(LED_COUNT + led_standard_2a - led_2 + 1 - led_times_2, led_main_g_2, led_main_r_2, led_main_b_2, color);
+            setLed(LED_COUNT + led_standard_2a - led_2 + 1 - led_times_2, led_main_g_2a, led_main_r_2a, led_main_b_2a, color);
         }
     }
     else
     {
-        setLed(led_standard_2a - led_2, led_main_g_2, led_main_r_2, led_main_b_2, color);
+        setLed(led_standard_2a - led_2, led_main_g_2a, led_main_r_2a, led_main_b_2a, color);
     }
 }
-// 3
+// 3 use
 void LED::led_error(SPI_HandleTypeDef *hspi)
 {
     Color color;
@@ -207,7 +208,7 @@ void LED::led_off(SPI_HandleTypeDef *hspi)
     }
     show(hspi);
 }
-// 5
+// 5 use
 void LED::led_spread(SPI_HandleTypeDef *hspi)
 {
     Color color;
