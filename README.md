@@ -1,6 +1,6 @@
 # NHKRobocon2024B_public
 NHKロボコン2024の産技高専荒川の一部ソースコードです。
-開発者のみ再配布・変更可能です。
+下記開発者のみ再配布・変更可能です。
 
 ## 開発者
 - https://github.com/aiba-gento
