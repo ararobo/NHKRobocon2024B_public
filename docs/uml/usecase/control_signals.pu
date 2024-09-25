@@ -1,0 +1,25 @@
+@startuml control_signal
+:human1: as human1
+:human2: as human2
+:human3: as human3
+(controller1) as controller1
+(controller2) as controller2
+(controller3) as controller3
+(robot1) as robot1
+(robot2_1) as robot2_1
+(robot2_2) as robot2_2
+(robot2_3) as robot2_3
+(robot2_4) as robot2_4
+(robot2_5) as robot2_5
+human1 -down-> controller1: 操縦信号
+controller1 .down.> robot1: 操縦信号
+robot1 .down.> robot2_1: 制御信号
+robot1 .down.> robot2_2: 制御信号
+robot1 .down.> robot2_3: 制御信号
+
+human2 -down-> controller2: 操縦信号
+controller2 .down.> robot2_4: 操縦信号
+
+human3 -down-> controller3: 操縦信号
+controller3 .down.> robot2_5: 操縦信号
+@enduml

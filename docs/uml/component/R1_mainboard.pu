@@ -1,0 +1,26 @@
+@startuml Robot1 mainboard
+
+package "App" {
+    [app]
+}
+
+package "MDManager" {
+    [dataManager]
+    [config] -> [dataManager]
+    [md_mode] -> [dataManager]
+}
+
+package "Peripheral" {
+    [CANPeripheral] -> [CAN]
+    [NeoPixel] -> [app]
+}
+
+package "Ethernet" {
+    [R2DataManager] -> [app]
+    [controller_wired] -> [app]
+}
+
+package "WiSun" {
+    [R2DataManager] -> [app]
+    [controller_wirelwss] -> [app]
+}

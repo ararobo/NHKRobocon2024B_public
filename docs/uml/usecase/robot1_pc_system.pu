@@ -1,0 +1,22 @@
+@startuml robot1_pc_system
+title ロボット1のPC内部の構造
+(キーボードからx,y等の制御信号を生成) as key
+(arucoマーカー認識ノード) as aruco
+(realsenseカメラ) as realsense
+(モータードライバ管理ノード) as motor
+(ロボット１制御ノード) as servo_air
+(メイン基板管理ノード) as mainboard
+(ロボット１制御ノード) as robot1_core
+(ロボット２制御ノード) as robot2_core
+(ロボット２制御値送信ノード) as robot2_communication
+
+key -down-> robot1_core : キーボードの状態
+mainboard -down-> robot1_core : 距離センサの値\nメイン基板のモード
+robot1_core -down-> motor : モータードライバの制御値
+robot1_core -down-> servo_air : サーボモータの制御値\nエアシリンダの制御値
+
+mainboard -down-> robot2_core : ロボット２の状態
+key -down-> robot2_core : キーボードの状態
+realsense -down-> aruco : カメラ画像
+aruco -down-> robot2_core : arucoマーカーの位置
+robot2_core -down-> robot2_communication : ロボ２制御値

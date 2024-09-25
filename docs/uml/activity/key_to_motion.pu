@@ -1,0 +1,19 @@
+@startuml key_to_motion
+title Key to Motion
+start
+while (ROSノードが起動)
+fork
+    while (キーボードの状態が受信された)
+        :"key_state"Topic通信を受信;
+        :"key_state"で受信したキー入力を解析して、キーボードの入力状態を更新;
+    endwhile
+fork again
+    while (10msごとにタイマー割り込みが発生)
+        :ロボットの移動[x, y, rotate]からオムニの各ホイールの出力wheel[4]を計算;
+        :wheel[4]にゲインをかけてモーターの出力に変換;
+        :Topic通信でmd_targetに出力を送信;
+    endwhile
+end fork
+endwhile
+stop
+@enduml

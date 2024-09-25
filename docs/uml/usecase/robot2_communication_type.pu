@@ -1,0 +1,8 @@
+@startuml robot2_communication_type
+title ロボット2の通信方法
+Robot1 ..> (MainBoard): UDP(920MHz)
+(MainBoard) -down-> (YamaHex): CAN
+(YamaHex) -down-> (Motor)
+(YamaHex) -down-> (Servo)
+(MainBoard) -down-> (LED)
+@enduml

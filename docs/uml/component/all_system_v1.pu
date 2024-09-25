@@ -1,0 +1,10 @@
+@startuml all_system_v1
+human -> (controllerPC)
+(controllerPC) -> (Wifi)
+(robot1PC) -> (Wifi)
+(robot1PC) -> (HTMD22)
+(Wifi) -> (HTMD15)
+(Wifi) -> (solenoid)
+(Realsense) -> (robot1PC)
+(Wifi) -> (serevo)
+@enduml

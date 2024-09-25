@@ -1,0 +1,22 @@
+@startuml robot1_communication_detail
+title ロボット1の通信内容
+controller .down.> (PC): 操縦信号(キーボードの状態etc)
+(PC) .up.> controller: センサ情報
+controller .down.> (PC): コマンド
+(PC) .up.> controller: センサ情報(画像データ)
+(MainBoard) -down-> (YamaHex): モーター制御
+(MainBoard) -down-> (YamaHex): サーボ制御
+(YamaHex) -down-> (Motor): モーター制御
+(YamaHex) -down-> (Servo): サーボ制御
+(MainBoard) -down-> (LEDDriver): LED制御
+(LEDDriver) -down-> (LED): LED制御
+(PC) -down-> (MainBoard):    制御信号
+(MainBoard) -up-> (PC):    操縦信号・センサ情報  
+(Realsense) -right-> (PC): 画像データ
+(MainBoard) -down-> Robot2: ロボット2の制御信号
+Robot2 -up-> (MainBoard): ロボット2のセンサ情報
+(MainBoard) -down-> (HTMD): モーター制御
+(HTMD) -down-> (Motor): モーター制御
+(MainBoard) -down-> (SolenoidDriver): ソレノイド制御
+(SolenoidDriver) -down-> (Solenoid): ソレノイド制御
+@enduml

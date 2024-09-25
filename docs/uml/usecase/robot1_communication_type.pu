@@ -1,0 +1,22 @@
+@startuml robot1_communication_type
+title ロボット1の通信方法
+controller .down.> (PC): UDP(920MHz)
+(PC) .up.> controller: UDP(920MHz)
+controller .down.> (PC): wifi
+(PC) .up.> controller: wifi
+(MainBoard) -down-> (YamaHex): CAN
+(MainBoard) -down-> (YamaHex): CAN
+(YamaHex) -down-> (Motor)
+(YamaHex) -down-> (Servo)
+(MainBoard) -down-> (LEDDriver): CAN
+(LEDDriver) -down-> (LED)
+(PC) -down-> (MainBoard): UDP(有線)
+(MainBoard) -up-> (PC): UDP(有線)
+(Realsense) -right-> (PC): USB
+(MainBoard) -down-> Robot2: UDP(920MHz)
+Robot2 -up-> (MainBoard): UDP(920MHz)
+(MainBoard) -down-> (HTMD): CAN
+(HTMD) -down-> (Motor)
+(MainBoard) -down-> (SolenoidDriver): CAN
+(SolenoidDriver) -down-> (Solenoid)
+@enduml

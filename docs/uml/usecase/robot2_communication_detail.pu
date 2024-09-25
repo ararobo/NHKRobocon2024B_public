@@ -1,0 +1,8 @@
+@startuml robot2_communication_detail
+title ロボット2の通信内容
+Robot1 ..> (MainBoard): 制御信号
+(MainBoard) -down-> (YamaHex): 制御信号
+(YamaHex) -down-> (Motor): モーター制御
+(YamaHex) -down-> (Servo): サーボ制御
+(MainBoard) -down-> (LED): LED制御
+@enduml

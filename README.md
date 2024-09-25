@@ -8,3 +8,10 @@ NHKロボコン2024の産技高専荒川の一部ソースコードです。
 - https://github.com/Watanabe-Koichiro
 - https://github.com/poccha5
 - https://github.com/ai-tr
+
+## 内容
+[ROS2](ros2_ws) : Gento Aiba & Iori Fukuda & Oba Naoki
+[メイン基板](mainboard_fw/mainboardv2) : Gento Aiba & Koichiro Watanabe
+[LEDドライバー](stm32g431k8t6) : Koichiro Watanabe & Gento Aiba
+[Wi-SUNのデバッグ用](wisun) : Gento Aiba
+[更新していないファイルーdocs](docs) : Gento Aiba

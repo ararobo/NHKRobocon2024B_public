@@ -1,0 +1,45 @@
+@startuml control_system_all
+操縦者 as human
+
+package "コントローラー" {
+    human -> (PC_keybord)
+    (PC_keybord) -down-> [MainBoard1]
+    [MainBoard1] -> (wireless1)
+}
+package "ロボット1" {
+    (wireless1) ..> (wireless2)
+    (wireless2) -> [MainBoard2]
+    [MainBoard2] -> [PC]
+    [PC] -> (monitor)
+    (Realsense) -down-> [PC]
+    [MainBoard2] -down-> [LEDDriver]
+    [LEDDriver] -down-> (LED)
+    [MainBoard2] -down-> [MotorDriver]
+    [MotorDriver] -down-> (Motor1)
+    [MainBoard2] -down-> [YamaHex1]
+    [YamaHex1] -down-> (Servo1)
+    [MainBoard2] -down-> (wireless2)
+}
+package "ロボット2_1" {
+    (wireless2) .down.> (wireless3)
+    (wireless3) -> [MainBoard3]
+    [MainBoard3] -down-> [YamaHex2]
+    [YamaHex2] -down-> (Servo2)
+    [YamaHex2] -down-> (Motor2)
+}
+package "ロボット2_2" {
+    (wireless2) .down.> (wireless4)
+    (wireless4) -> [MainBoard4]
+    [MainBoard4] -down-> [YamaHex3]
+    [YamaHex3] -down-> (Servo3)
+    [YamaHex3] -down-> (Motor3)
+}
+package "ロボット2_3" {
+    (wireless2) .down.> (wireless5)
+    (wireless5) -> [MainBoard5]
+    [MainBoard5] -down-> [YamaHex4]
+    [YamaHex4] -down-> (Servo4)
+    [YamaHex4] -down-> (Motor4)
+}
+
+@enduml
