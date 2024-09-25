@@ -1,3 +1,13 @@
+/**
+ * @file aruco_detector.cpp
+ * @author ai-tr
+ * @brief アルゴマーカーを認識するノード
+ * @version 0.1
+ * @date 2024-09-25
+ *
+ * @copyright Copyright (c) 2024
+ *
+ */
 #include <node/aruco_detector.hpp>
 
 ArucoDetector::ArucoDetector() : Node("aruco_detector")
