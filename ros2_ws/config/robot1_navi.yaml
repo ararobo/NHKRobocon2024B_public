@@ -1,0 +1,26 @@
+robot1_navi:
+  ros__parameters:
+    x:
+      Kp: 1.00
+      Ki: 0.00
+      Kd: 0.00
+    y:
+      Kp: 1.00
+      Ki: 0.00
+      Kd: 0.00
+    j:
+      Kp: 1.00
+      Ki: 0.00
+      Kd: 0.00
+    gool1:
+      x: 0.100
+      y: 1.4
+    gool2:
+      x: 1.500
+      y: 1.200  
+    gool3:
+      x: 1.500
+      y: 0.100
+    startpoint:
+      x: 0.100
+      y: 0.100

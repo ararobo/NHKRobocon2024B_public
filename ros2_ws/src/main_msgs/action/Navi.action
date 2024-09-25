@@ -1,0 +1,6 @@
+uint8 robot_id
+uint8 object_id
+---
+geometry_msgs/PoseStamped pose
+---
+float64 distance

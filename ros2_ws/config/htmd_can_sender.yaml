@@ -1,0 +1,309 @@
+htmd_can_sender:
+  ros__parameters:
+    md_num: 4
+    enable:
+      md_0_init: true
+      md_1_init: true
+      md_2_init: true
+      md_3_init: true
+      md_4_init: false
+      md_5_init: false
+      md_6_init: false
+      md_7_init: false
+      md_8_init: false
+      md_9_init: false
+      md_10_init: false
+      md_11_init: false
+      md_12_init: false
+      md_13_init: false
+      md_14_init: false
+      md_15_init: false
+    default:
+      md_0_pid:
+        Kp: 1.0
+        Ki: 0.5
+        Kd: 0.0
+      md_1_pid:
+        Kp: 1.0
+        Ki: 0.5
+        Kd: 0.0
+      md_2_pid:
+        Kp: 1.0
+        Ki: 0.5
+        Kd: 0.0
+      md_3_pid:
+        Kp: 1.0
+        Ki: 0.5
+        Kd: 0.0
+      md_4_pid:
+        Kp: 0.0
+        Ki: 0.0
+        Kd: 0.0
+      md_5_pid:
+        Kp: 0.0
+        Ki: 0.0
+        Kd: 0.0
+      md_6_pid:
+        Kp: 0.0
+        Ki: 0.0
+        Kd: 0.0
+      md_7_pid:
+        Kp: 0.0
+        Ki: 0.0
+        Kd: 0.0
+      md_8_pid:
+        Kp: 0.0
+        Ki: 0.0
+        Kd: 0.0
+      md_9_pid:
+        Kp: 0.0
+        Ki: 0.0
+        Kd: 0.0
+      md_10_pid:
+        Kp: 0.0
+        Ki: 0.0
+        Kd: 0.0
+      md_11_pid:
+        Kp: 0.0
+        Ki: 0.0
+        Kd: 0.0
+      md_12_pid:
+        Kp: 0.0
+        Ki: 0.0
+        Kd: 0.0
+      md_13_pid:
+        Kp: 0.0
+        Ki: 0.0
+        Kd: 0.0
+      md_14_pid:
+        Kp: 0.0
+        Ki: 0.0
+        Kd: 0.0
+      md_15_pid:
+        Kp: 0.0
+        Ki: 0.0
+        Kd: 0.0
+      md_0_mode:
+        incremental_encoder: true
+        absolute_encoder: false
+        reverse_encoder: false
+        brake: true
+        pid: false
+        current: false
+        torque_control: false
+        state: false
+        max_acceleration: 100
+        max_current: 0
+        report_rate: 100
+        max_output: 3199
+        motor_transfer_coefficient: 100
+      md_1_mode:
+        incremental_encoder: true
+        absolute_encoder: false
+        reverse_encoder: false
+        brake: true
+        pid: false
+        current: false
+        torque_control: false
+        state: false
+        max_acceleration: 100
+        max_current: 0
+        report_rate: 100
+        max_output: 3199
+        motor_transfer_coefficient: 100
+      md_2_mode:
+        incremental_encoder: true
+        absolute_encoder: false
+        reverse_encoder: false
+        brake: true
+        pid: false
+        current: false
+        torque_control: false
+        state: false
+        max_acceleration: 100
+        max_current: 0
+        report_rate: 100
+        max_output: 3199
+        motor_transfer_coefficient: 100
+      md_3_mode:
+        incremental_encoder: true
+        absolute_encoder: false
+        reverse_encoder: false
+        brake: true
+        pid: false
+        current: false
+        torque_control: false
+        state: false
+        max_acceleration: 100
+        max_current: 0
+        report_rate: 100
+        max_output: 3199
+        motor_transfer_coefficient: 100
+      md_4_mode:
+        incremental_encoder: false
+        absolute_encoder: false
+        reverse_encoder: false
+        brake: true
+        pid: false
+        current: false
+        torque_control: false
+        state: false
+        max_acceleration: 100
+        max_current: 0
+        report_rate: 100
+        max_output: 3199
+        motor_transfer_coefficient: 0
+      md_5_mode:
+        incremental_encoder: false
+        absolute_encoder: false
+        reverse_encoder: false
+        brake: true
+        pid: false
+        current: false
+        torque_control: false
+        state: false
+        max_acceleration: 100
+        max_current: 0
+        report_rate: 100
+        max_output: 3199
+        motor_transfer_coefficient: 0
+      md_6_mode:
+        incremental_encoder: false
+        absolute_encoder: false
+        reverse_encoder: false
+        brake: true
+        pid: false
+        current: false
+        torque_control: false
+        state: false
+        max_acceleration: 100
+        max_current: 0
+        report_rate: 100
+        max_output: 3199
+        motor_transfer_coefficient: 0
+      md_7_mode:
+        incremental_encoder: false
+        absolute_encoder: false
+        reverse_encoder: false
+        brake: true
+        pid: false
+        current: false
+        torque_control: false
+        state: false
+        max_acceleration: 100
+        max_current: 0
+        report_rate: 100
+        max_output: 3199
+        motor_transfer_coefficient: 0
+      md_8_mode:
+        incremental_encoder: false
+        absolute_encoder: false
+        reverse_encoder: false
+        brake: true
+        pid: false
+        current: false
+        torque_control: false
+        state: false
+        max_acceleration: 100
+        max_current: 0
+        report_rate: 100
+        max_output: 3199
+        motor_transfer_coefficient: 0
+      md_9_mode:
+        incremental_encoder: false
+        absolute_encoder: false
+        reverse_encoder: false
+        brake: true
+        pid: false
+        current: false
+        torque_control: false
+        state: false
+        max_acceleration: 100
+        max_current: 0
+        report_rate: 100
+        max_output: 3199
+        motor_transfer_coefficient: 0
+      md_10_mode:
+        incremental_encoder: false
+        absolute_encoder: false
+        reverse_encoder: false
+        brake: true
+        pid: false
+        current: false
+        torque_control: false
+        state: false
+        max_acceleration: 100
+        max_current: 0
+        report_rate: 100
+        max_output: 3199
+        motor_transfer_coefficient: 0
+      md_11_mode:
+        incremental_encoder: false
+        absolute_encoder: false
+        reverse_encoder: false
+        brake: true
+        pid: false
+        current: false
+        torque_control: false
+        state: false
+        max_acceleration: 100
+        max_current: 0
+        report_rate: 100
+        max_output: 3199
+        motor_transfer_coefficient: 0
+      md_12_mode:
+        incremental_encoder: false
+        absolute_encoder: false
+        reverse_encoder: false
+        brake: true
+        pid: false
+        current: false
+        torque_control: false
+        state: false
+        max_acceleration: 100
+        max_current: 0
+        report_rate: 100
+        max_output: 3199
+        motor_transfer_coefficient: 0
+      md_13_mode:
+        incremental_encoder: false
+        absolute_encoder: false
+        reverse_encoder: false
+        brake: true
+        pid: false
+        current: false
+        torque_control: false
+        state: false
+        max_acceleration: 100
+        max_current: 0
+        report_rate: 100
+        max_output: 3199
+        motor_transfer_coefficient: 0
+      md_14_mode:
+        incremental_encoder: false
+        absolute_encoder: false
+        reverse_encoder: false
+        brake: true
+        pid: false
+        current: false
+        torque_control: false
+        state: false
+        max_acceleration: 100
+        max_current: 0
+        report_rate: 100
+        max_output: 3199
+        motor_transfer_coefficient: 0
+      md_15_mode:
+        incremental_encoder: false
+        absolute_encoder: false
+        reverse_encoder: false
+        brake: true
+        pid: false
+        current: false
+        torque_control: false
+        state: false
+        max_acceleration: 100
+        max_current: 0
+        report_rate: 100
+        max_output: 3199
+        motor_transfer_coefficient: 0

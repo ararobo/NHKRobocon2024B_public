@@ -1,0 +1,4 @@
+htmd_can_receiver:
+  ros__parameters:
+    md_num: 4
+    motor_transfer_coefficient_quality: 100.0
